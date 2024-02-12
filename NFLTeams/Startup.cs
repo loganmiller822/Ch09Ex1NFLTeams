@@ -24,6 +24,7 @@ namespace NFLTeams
             services.AddSession();
 
             services.AddControllersWithViews().AddNewtonsoftJson();
+            services.AddHttpContextAccessor();
 
             services.AddDbContext<TeamContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("TeamContext")));
